@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+    <h2>Example Form</h2>
+    <form action="/form-example" method="post">
+        <label>A. 2017 Ford GT <input type="radio" name="correct"/></label><br/>
+        <label>B. 2016 Ford Mustang <input type="radio" name="incorrect"/></label><br/>
+        <label>C. 2010 Ford Mustang <input type="radio" name="incorrect"/></label><br/>
+        <label>D. 2006 Ford GT <input type="radio" name="incorrect"/></label><br/>
+        <input type="submit" value="Enter"><br/>
+    </form>
+
+    {% if info %}
+        <h3>Submitted name:</h3>
+        <p>{{ info['firstname'] }} {{ info['lastname'] }}</p>
+    {% endif %}
+
+{% endblock %}
